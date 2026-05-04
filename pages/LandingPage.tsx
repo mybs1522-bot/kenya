@@ -101,7 +101,7 @@ const LandingPage: React.FC = () => {
 
       {/* ═══ GHANA BANNER ═══ */}
       <div className="w-full bg-green-600 text-white text-center py-2.5 px-4 font-bold text-sm">
-        🇭 Now Available In Ghana
+        <img src="https://whatemoji.org/wp-content/uploads/2020/07/Ghana-Emoji.png" alt="Ghana flag" className="inline-block w-5 h-5 -mt-0.5" /> Now Available In Ghana
       </div>
 
       {/* ═══ STICKY HEADER ═══ */}

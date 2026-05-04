@@ -146,7 +146,7 @@ const CheckoutPage: React.FC = () => {
             }}
             className="w-full py-4 bg-green-600 hover:bg-green-700 rounded-xl flex items-center justify-center gap-2.5 transition-all"
           >
-            <span className="text-white text-lg">🇬🇭</span>
+            <img src="https://whatemoji.org/wp-content/uploads/2020/07/Ghana-Emoji.png" alt="Ghana flag" className="w-5 h-5" />
             <span className="text-white font-bold text-base">Pay GH₵150 · Get Instant Access</span>
           </button>
 

@@ -78,7 +78,7 @@ function SelarButton({ email }: { email: string }) {
       onClick={handleSelar}
       className="w-full py-3.5 bg-green-600 hover:bg-green-700 rounded-xl flex items-center justify-center gap-2.5 transition-all"
     >
-      <span className="text-white text-lg">🇭</span>
+      <img src="https://whatemoji.org/wp-content/uploads/2020/07/Ghana-Emoji.png" alt="Ghana flag" className="w-5 h-5" />
       <span className="text-white font-bold text-base">Pay with Mobile Money / Cedi</span>
     </button>
   );

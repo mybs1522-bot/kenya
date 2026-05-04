@@ -147,7 +147,7 @@ const OnetimePage: React.FC = () => {
             className="w-full py-4 text-white font-bold text-lg rounded-2xl flex items-center justify-center gap-3 active:scale-[0.98] btn-pulse"
             style={{ background: 'linear-gradient(135deg,#f97316,#ea580c)' }}
           >
-            <span className="text-lg">🇭</span>
+            <img src="https://whatemoji.org/wp-content/uploads/2020/07/Ghana-Emoji.png" alt="Ghana flag" className="w-5 h-5" />
             <Gift size={20} />
             Yes! Unlock All 9 Courses — GH₵370
             <ArrowRight size={20} />
@@ -221,7 +221,7 @@ const OnetimePage: React.FC = () => {
               onClick={handleSelarCheckout}
               className="w-full py-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold text-lg rounded-2xl flex items-center justify-center gap-3 group active:scale-[0.98] transition-all btn-pulse"
             >
-              <span className="text-lg">��</span>
+              <img src="https://whatemoji.org/wp-content/uploads/2020/07/Ghana-Emoji.png" alt="Ghana flag" className="w-5 h-5" />
               <Gift size={20} />
               Yes! Unlock All 9 Courses — GH₵370
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -336,7 +336,7 @@ const OnetimePage: React.FC = () => {
             className="w-full py-4 text-white font-bold text-lg rounded-2xl flex items-center justify-center gap-3 active:scale-[0.98] btn-pulse"
             style={{ background: 'linear-gradient(135deg,#f97316,#ea580c)' }}
           >
-            <span className="text-lg">🇬🇭</span>
+            <img src="https://whatemoji.org/wp-content/uploads/2020/07/Ghana-Emoji.png" alt="Ghana flag" className="w-5 h-5" />
             <Gift size={20} />
             Yes! Unlock All 9 Courses — GH₵370
             <ArrowRight size={20} />
@@ -389,7 +389,7 @@ const OnetimePage: React.FC = () => {
               onClick={handleSelarCheckout}
               className="w-full py-4 bg-green-600 hover:bg-green-700 rounded-xl flex items-center justify-center gap-2.5 transition-all"
             >
-              <span className="text-white text-lg">🇬🇭</span>
+              <img src="https://whatemoji.org/wp-content/uploads/2020/07/Ghana-Emoji.png" alt="Ghana flag" className="w-5 h-5" />
               <span className="text-white font-bold text-base">Pay GH₵370 · Get Instant Access</span>
             </button>
           </div>
