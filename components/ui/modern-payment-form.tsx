@@ -68,7 +68,7 @@ function PayPalButton({ email, onSuccess, amount }: { email: string; onSuccess: 
 
 function SelarButton({ email }: { email: string }) {
   const handleSelar = () => {
-    const selarUrl = `https://selar.com/coursegh?quickcheckout=1&email=${encodeURIComponent(email)}`;
+    const selarUrl = `https://selar.com/courseke?quickcheckout=1&email=${encodeURIComponent(email)}`;
     window.open(selarUrl, '_blank');
   };
 
@@ -78,8 +78,8 @@ function SelarButton({ email }: { email: string }) {
       onClick={handleSelar}
       className="w-full py-3.5 bg-green-600 hover:bg-green-700 rounded-xl flex items-center justify-center gap-2.5 transition-all"
     >
-      <img src="https://whatemoji.org/wp-content/uploads/2020/07/Ghana-Emoji.png" alt="Ghana flag" className="w-5 h-5" />
-      <span className="text-white font-bold text-base">Pay with Mobile Money / Cedi</span>
+      <img src="https://flagcdn.com/w40/ke.png" alt="Kenya flag" className="w-5 h-5" />
+      <span className="text-white font-bold text-base">Pay with M-Pesa / Shilling</span>
     </button>
   );
 }
@@ -216,7 +216,7 @@ function CheckoutForm({ email, onSuccess, onBack, amount }: CheckoutFormProps) {
 
   return (
     <div className="space-y-4">
-      {/* Pay with Selar (Mobile Money / Cedi) — top */}
+      {/* Pay with Selar (M-Pesa / Shilling) — top */}
       <SelarButton email={email} />
 
       {/* Pay with Crypto */}

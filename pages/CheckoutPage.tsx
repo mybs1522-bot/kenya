@@ -17,7 +17,7 @@ const CheckoutPage: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if ((window as any).fbq) (window as any).fbq("track", "ViewContent", { content_name: "Avada Checkout", value: 150, currency: "GHS" });
+    if ((window as any).fbq) (window as any).fbq("track", "ViewContent", { content_name: "Avada Checkout", value: 1500, currency: "KES" });
   }, []);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const CheckoutPage: React.FC = () => {
 
   const handleSuccess = (customerId?: string, paymentMethodId?: string, paymentIntentId?: string) => {
     console.log('[CheckoutPage] Payment succeeded. customerId:', customerId, 'paymentMethodId:', paymentMethodId, 'paymentIntentId:', paymentIntentId);
-    if ((window as any).fbq) (window as any).fbq("track", "Purchase", { value: 150, currency: "GHS" });
+    if ((window as any).fbq) (window as any).fbq("track", "Purchase", { value: 1500, currency: "KES" });
     sendStageEmail(email, 'render');
     navigate("/onetime", { state: { customerId, paymentMethodId, paymentIntentId, email } });
   };
@@ -75,8 +75,8 @@ const CheckoutPage: React.FC = () => {
           </div>
           <h3 className="text-xl font-display font-bold mb-1">SketchUp + V-Ray + D5 Render</h3>
           <div className="flex items-baseline gap-2">
-            <span className="text-2xl font-display font-black">GH₵150</span>
-            <span className="text-gray-500 text-sm line-through">GH₵990</span>
+            <span className="text-2xl font-display font-black">KES 1,500</span>
+            <span className="text-gray-500 text-sm line-through">KES 9,900</span>
             <span className="bg-white/10 text-white text-xs font-bold px-2 py-0.5 rounded-full border border-white/20">85% OFF</span>
           </div>
         </div>
@@ -141,13 +141,13 @@ const CheckoutPage: React.FC = () => {
               sessionStorage.setItem('checkout_fullname', fullName.trim());
               sessionStorage.setItem('checkout_email', email);
               const redirectUrl = `${window.location.origin}/onetime`;
-              const selarUrl = `https://selar.com/coursegh?quickcheckout=1&email=${encodeURIComponent(email)}&fullname=${encodeURIComponent(fullName.trim())}&currency=GHS&redirect_url=${encodeURIComponent(redirectUrl)}`;
+              const selarUrl = `https://selar.com/courseke?quickcheckout=1&email=${encodeURIComponent(email)}&fullname=${encodeURIComponent(fullName.trim())}&currency=KES&redirect_url=${encodeURIComponent(redirectUrl)}`;
               window.location.href = selarUrl;
             }}
             className="w-full py-4 bg-green-600 hover:bg-green-700 rounded-xl flex items-center justify-center gap-2.5 transition-all"
           >
-            <img src="https://whatemoji.org/wp-content/uploads/2020/07/Ghana-Emoji.png" alt="Ghana flag" className="w-5 h-5" />
-            <span className="text-white font-bold text-base">Pay GH₵150 · Get Instant Access</span>
+            <img src="https://flagcdn.com/w40/ke.png" alt="Kenya flag" className="w-5 h-5" />
+            <span className="text-white font-bold text-base">Pay KES 1,500 · Get Instant Access</span>
           </button>
 
           <div className="flex items-center justify-center gap-4 mt-4 text-[10px] text-gray-400 font-medium uppercase tracking-wide">

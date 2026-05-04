@@ -28,10 +28,10 @@ const OnetimePage: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if ((window as any).fbq) (window as any).fbq("track", "ViewContent", { content_name: "Avada Upsell", value: 37000, currency: "GHS" });
+    if ((window as any).fbq) (window as any).fbq("track", "ViewContent", { content_name: "Avada Upsell", value: 3700, currency: "KES" });
     // If arriving from crypto payment, fire purchase event
     if (isCryptoSuccess && emailFromState) {
-      if ((window as any).fbq) (window as any).fbq("track", "Purchase", { value: 37000, currency: "GHS" });
+      if ((window as any).fbq) (window as any).fbq("track", "Purchase", { value: 3700, currency: "KES" });
       sendStageEmail(emailFromState, 'render');
     }
   }, []);
@@ -56,7 +56,7 @@ const OnetimePage: React.FC = () => {
   const f = (v: number) => v.toString().padStart(2, "0");
 
   const handleSuccess = (newCustomerId?: string, newPaymentMethodId?: string) => {
-    if ((window as any).fbq) (window as any).fbq("track", "Purchase", { value: 37000, currency: "GHS" });
+    if ((window as any).fbq) (window as any).fbq("track", "Purchase", { value: 3700, currency: "KES" });
     sendStageEmail(email, 'full');
     navigate("/offer", { state: { customerId: newCustomerId ?? customerId, paymentMethodId: newPaymentMethodId ?? paymentMethodId, paymentIntentId, email } });
   };
@@ -76,7 +76,7 @@ const OnetimePage: React.FC = () => {
     }
     sessionStorage.setItem('checkout_fullname', fullName.trim());
     sessionStorage.setItem('checkout_email', email);
-    const selarUrl = `https://selar.com/coursesgh?quickcheckout=1&email=${encodeURIComponent(email)}&fullname=${encodeURIComponent(fullName.trim())}&currency=GHS`;
+    const selarUrl = `https://selar.com/onetimeke?quickcheckout=1&email=${encodeURIComponent(email)}&fullname=${encodeURIComponent(fullName.trim())}&currency=KES`;
     window.location.href = selarUrl;
   };
 
@@ -130,13 +130,13 @@ const OnetimePage: React.FC = () => {
                 <p className="text-gray-500 text-sm">9 Additional Premium Courses</p>
               </div>
               <div className="text-right">
-                <span className="text-gray-400 text-lg line-through mr-2">GH₵990</span>
-                <span className="text-4xl font-display font-black text-gray-900">GH₵370</span>
+                <span className="text-gray-400 text-lg line-through mr-2">KES 9,900</span>
+                <span className="text-4xl font-display font-black text-gray-900">KES 3,700</span>
               </div>
             </div>
             <div className="flex items-center gap-2 bg-emerald-50 border border-emerald-100 rounded-lg px-3 py-2">
               <Zap size={14} className="text-emerald-500" />
-              <span className="text-sm font-semibold text-emerald-700">You save GH₵620 — that's 63% off!</span>
+              <span className="text-sm font-semibold text-emerald-700">You save KES 6,200 — that's 63% off!</span>
             </div>
           </div>
         </div>
@@ -147,9 +147,9 @@ const OnetimePage: React.FC = () => {
             className="w-full py-4 text-white font-bold text-lg rounded-2xl flex items-center justify-center gap-3 active:scale-[0.98] btn-pulse"
             style={{ background: 'linear-gradient(135deg,#f97316,#ea580c)' }}
           >
-            <img src="https://whatemoji.org/wp-content/uploads/2020/07/Ghana-Emoji.png" alt="Ghana flag" className="w-5 h-5" />
+            <img src="https://flagcdn.com/w40/ke.png" alt="Kenya flag" className="w-5 h-5" />
             <Gift size={20} />
-            Yes! Unlock All 9 Courses — GH₵370
+            Yes! Unlock All 9 Courses — KES 3,700
             <ArrowRight size={20} />
           </button>
           <button
@@ -221,9 +221,9 @@ const OnetimePage: React.FC = () => {
               onClick={handleSelarCheckout}
               className="w-full py-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold text-lg rounded-2xl flex items-center justify-center gap-3 group active:scale-[0.98] transition-all btn-pulse"
             >
-              <img src="https://whatemoji.org/wp-content/uploads/2020/07/Ghana-Emoji.png" alt="Ghana flag" className="w-5 h-5" />
+              <img src="https://flagcdn.com/w40/ke.png" alt="Kenya flag" className="w-5 h-5" />
               <Gift size={20} />
-              Yes! Unlock All 9 Courses — GH₵370
+              Yes! Unlock All 9 Courses — KES 3,700
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </button>
 
@@ -336,9 +336,9 @@ const OnetimePage: React.FC = () => {
             className="w-full py-4 text-white font-bold text-lg rounded-2xl flex items-center justify-center gap-3 active:scale-[0.98] btn-pulse"
             style={{ background: 'linear-gradient(135deg,#f97316,#ea580c)' }}
           >
-            <img src="https://whatemoji.org/wp-content/uploads/2020/07/Ghana-Emoji.png" alt="Ghana flag" className="w-5 h-5" />
+            <img src="https://flagcdn.com/w40/ke.png" alt="Kenya flag" className="w-5 h-5" />
             <Gift size={20} />
-            Yes! Unlock All 9 Courses — GH₵370
+            Yes! Unlock All 9 Courses — KES 3,700
             <ArrowRight size={20} />
           </button>
 
@@ -358,7 +358,7 @@ const OnetimePage: React.FC = () => {
             <button onClick={() => setShowPayment(false)} className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"><X size={20}/></button>
             <div className="flex items-center justify-between mb-4 mt-2">
               <h3 className="text-lg font-bold text-gray-900">Complete Your Upgrade</h3>
-              <div className="bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full">GH₵370</div>
+              <div className="bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full">KES 3,700</div>
             </div>
             <label className="block text-sm font-bold text-gray-900 mb-1.5">Full Name</label>
             <div className="relative mb-3">
@@ -389,8 +389,8 @@ const OnetimePage: React.FC = () => {
               onClick={handleSelarCheckout}
               className="w-full py-4 bg-green-600 hover:bg-green-700 rounded-xl flex items-center justify-center gap-2.5 transition-all"
             >
-              <img src="https://whatemoji.org/wp-content/uploads/2020/07/Ghana-Emoji.png" alt="Ghana flag" className="w-5 h-5" />
-              <span className="text-white font-bold text-base">Pay GH₵370 · Get Instant Access</span>
+              <img src="https://flagcdn.com/w40/ke.png" alt="Kenya flag" className="w-5 h-5" />
+              <span className="text-white font-bold text-base">Pay KES 3,700 · Get Instant Access</span>
             </button>
           </div>
         </div>
@@ -402,7 +402,7 @@ const OnetimePage: React.FC = () => {
             <button onClick={() => setIsConfirmingSkip(false)} className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"><X size={20}/></button>
             <h4 className="text-red-700 font-bold text-2xl mb-2 mt-4">Are you sure?</h4>
             <p className="text-gray-700 text-base mb-6">
-              This 85% discount will not be available again. You can still buy this later, but it will be at the full regular price (GH₵990).
+              This 85% discount will not be available again. You can still buy this later, but it will be at the full regular price (KES 9,900).
             </p>
             <div className="space-y-3">
               <button
