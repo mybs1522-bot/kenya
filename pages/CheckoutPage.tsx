@@ -34,7 +34,7 @@ const CheckoutPage: React.FC = () => {
   const handleSuccess = (customerId?: string, paymentMethodId?: string, paymentIntentId?: string) => {
     console.log('[CheckoutPage] Payment succeeded. customerId:', customerId, 'paymentMethodId:', paymentMethodId, 'paymentIntentId:', paymentIntentId);
     if ((window as any).fbq) (window as any).fbq("track", "Purchase", { value: 1500, currency: "KES" });
-    sendStageEmail(email, 'render');
+    sendStageEmail(email, 'render-bundle');
     navigate("/onetime", { state: { customerId, paymentMethodId, paymentIntentId, email } });
   };
 
@@ -140,8 +140,7 @@ const CheckoutPage: React.FC = () => {
               if (!nameValid || !emailValid) return;
               sessionStorage.setItem('checkout_fullname', fullName.trim());
               sessionStorage.setItem('checkout_email', email);
-              const redirectUrl = `${window.location.origin}/onetime`;
-              const selarUrl = `https://selar.com/courseke?quickcheckout=1&email=${encodeURIComponent(email)}&fullname=${encodeURIComponent(fullName.trim())}&currency=KES&redirect_url=${encodeURIComponent(redirectUrl)}`;
+              const selarUrl = `https://selar.com/7yhs31x161?currency=KES&quickcheckout=1&email=${encodeURIComponent(email)}&fullname=${encodeURIComponent(fullName.trim())}`;
               window.location.href = selarUrl;
             }}
             className="w-full py-4 bg-green-600 hover:bg-green-700 rounded-xl flex items-center justify-center gap-2.5 transition-all"

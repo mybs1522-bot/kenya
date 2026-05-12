@@ -32,7 +32,7 @@ const OnetimePage: React.FC = () => {
     // If arriving from crypto payment, fire purchase event
     if (isCryptoSuccess && emailFromState) {
       if ((window as any).fbq) (window as any).fbq("track", "Purchase", { value: 3700, currency: "KES" });
-      sendStageEmail(emailFromState, 'render');
+      sendStageEmail(emailFromState, 'render-bundle');
     }
   }, []);
 
@@ -57,7 +57,7 @@ const OnetimePage: React.FC = () => {
 
   const handleSuccess = (newCustomerId?: string, newPaymentMethodId?: string) => {
     if ((window as any).fbq) (window as any).fbq("track", "Purchase", { value: 3700, currency: "KES" });
-    sendStageEmail(email, 'full');
+    sendStageEmail(email, 'full-bundle');
     navigate("/offer", { state: { customerId: newCustomerId ?? customerId, paymentMethodId: newPaymentMethodId ?? paymentMethodId, paymentIntentId, email } });
   };
 
@@ -76,7 +76,7 @@ const OnetimePage: React.FC = () => {
     }
     sessionStorage.setItem('checkout_fullname', fullName.trim());
     sessionStorage.setItem('checkout_email', email);
-    const selarUrl = `https://selar.com/onetimeke?quickcheckout=1&email=${encodeURIComponent(email)}&fullname=${encodeURIComponent(fullName.trim())}&currency=KES`;
+    const selarUrl = `https://selar.com/xofm2g7c71?currency=KES&quickcheckout=1&email=${encodeURIComponent(email)}&fullname=${encodeURIComponent(fullName.trim())}`;
     window.location.href = selarUrl;
   };
 
